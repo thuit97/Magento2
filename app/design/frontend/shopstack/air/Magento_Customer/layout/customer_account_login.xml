@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="3columns" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <container name="login.bottom.container" htmlTag="footer" htmlClass="thu0123">
+            <block class="Magento\Framework\View\Element\Template" name="login.bottom.info" template="Magento_Customer::login-bottom-info.phtml"/>
+        </container>
+        <move element="login.bottom.container" destination="content" before="customer.login.container"/>
+        <referenceBlock name="customer.new" remove="0"/>
+        <referenceContainer name="customer.login.container" remove="0"/>
+
+        <!--login header info-->
+        <container name="login.header.container" htmlTag="div" htmlClass="shop123">
+            <block class="Magento\Framework\View\Element\Template" name="login.header.info" template="Magento_Customer::login-header-info.phtml"/>
+        </container>
+        <move element="login.header.container" destination="customer.new"/>
+        
+    </body>
+</page>
